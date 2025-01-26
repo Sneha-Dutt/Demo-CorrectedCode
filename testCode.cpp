@@ -88,3 +88,10 @@ TEST(SensorDataTests, MemoryAllocationFailure) {
     std::cout << "Captured Output: " << output << std::endl;
     EXPECT_TRUE(output.find("Memory allocation failed!") == std::string::npos); // Should not fail
 }
+
+int main(int argc, char **argv) {
+    ::testing::InitGoogleTest(&argc, argv);
+    std::cout << "Number of tests: " << ::testing::UnitTest::GetInstance()->total_test_count() << std::endl;
+    return RUN_ALL_TESTS();
+}
+
