@@ -36,7 +36,7 @@ void process_data(uint16_t *data) {
 }
 
 int main() { 
-    uint16_t *sensor_data = malloc(BUFFER_SIZE * sizeof(uint16_t));
+    uint16_t *sensor_data = (uint16_t *)malloc(BUFFER_SIZE * sizeof(uint16_t));
     if (sensor_data == NULL) {
         printf("Memory allocation failed!\n");
         exit(1);
