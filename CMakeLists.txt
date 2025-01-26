@@ -19,7 +19,7 @@ add_executable(SensorDataTests testCode.cpp)
 target_link_libraries(SensorDataTests GTest::GTest GTest::Main pthread)
 
 # Add test files
-add_executable(runTest testCode.cpp main.cpp)  # Link both main.cpp and testCode.cpp for testing
+add_executable(SensorDataTests testCode.cpp main.cpp)  # Link both main.cpp and testCode.cpp for testing
 
 # Link GoogleTest libraries
 target_link_libraries(runTest GTest::GTest GTest::Main)
