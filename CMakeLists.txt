@@ -18,3 +18,6 @@ target_link_libraries(runTest GTest::GTest GTest::Main)
 
 # Add tests
 add_test(NAME SensorDataTests COMMAND runTest)
+
+# Configure the test output in XML format
+set(CMAKE_CTEST_COMMAND ctest --output-on-failure --output-junit unit_test_report.xml)
