@@ -13,8 +13,8 @@ find_package(GTest REQUIRED)
 # Include GoogleTest directories
 include_directories(${GTEST_INCLUDE_DIRS})
 
-# Add the test executable for SensorDataTests
-add_executable(SensorDataTests testCode.cpp)  # Do NOT include main.cpp here
+# Add the test executable for SensorDataTests and link necessary source files (e.g., sensor_data.cpp)
+add_executable(SensorDataTests testCode.cpp main.cpp)  # Include sensor_data.cpp here
 
 # Link the test executable with GoogleTest and pthread
 target_link_libraries(SensorDataTests GTest::GTest GTest::Main pthread)
