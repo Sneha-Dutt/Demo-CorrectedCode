@@ -11,7 +11,7 @@ add_executable(main main.cpp)
 find_package(GTest REQUIRED)
 
 # Add test files
-add_executable(runTest testExerciseCode.cpp)
+add_executable(runTest testCode.cpp)
 
 # Link GoogleTest libraries
 target_link_libraries(runTest GTest::GTest GTest::Main)
