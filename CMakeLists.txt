@@ -10,8 +10,8 @@ add_executable(main main.cpp)
 # Add GoogleTest
 find_package(GTest REQUIRED)
 
-# Add test files (this includes testCode.cpp for unit tests)
-add_executable(runTest testCode.cpp)  # Only test files for unit tests
+# Add test files
+add_executable(runTest testCode.cpp main.cpp)  # Link both main.cpp and testCode.cpp for testing
 
 # Link GoogleTest libraries
 target_link_libraries(runTest GTest::GTest GTest::Main)
