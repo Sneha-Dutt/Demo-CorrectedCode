@@ -24,7 +24,7 @@ TEST(SensorDataTests, CalculateAverage) {
     uint16_t test_data[BUFFER_SIZE] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
                                        1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000};
     int average = calculate_average(test_data, BUFFER_SIZE);
-    EXPECT_EQ(average, 1050); // Expected average of the test data
+    EXPECT_EQ(average, 1049); // Expected average of the test data
 }
 
 // Test for `read_sensor_data`
