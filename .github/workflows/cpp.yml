@@ -70,12 +70,8 @@ jobs:
       # Display unit test results for debugging, checking if the file exists first
       - name: Display unit test results
         run: |
-          if [ -f build/unit_test_report.xml ]; then
             echo "Unit Test Results:"
             cat build/unit_test_report.xml
-          else
-            echo "Unit test report not found."
-          fi
 
       # Upload unit test result logs as an artifact
       - name: Upload unit test log
