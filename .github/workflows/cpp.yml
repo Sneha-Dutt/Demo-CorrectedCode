@@ -51,7 +51,7 @@ jobs:
       - name: Install dependencies and GoogleTest
         run: |
           sudo apt-get update
-          sudo apt-get install -y cmake build-essential
+          sudo apt-get install -y cmake build-essential g++  # Ensure g++ is installed
           cd /tmp
           git clone https://github.com/google/googletest.git
           cd googletest
@@ -64,8 +64,8 @@ jobs:
           mkdir build
           cd build
           cmake ..
-          make
-          ./runTest --gtest_output=xml:unit_test_report.xml || true
+          make VERBOSE=1  # Add verbose output to debug build issues
+          ctest --output-on-failure --output-junit unit_test_report.xml  # Use ctest for test execution
 
       # Display unit test results for debugging, checking if the file exists first
       - name: Display unit test results
