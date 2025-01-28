@@ -20,6 +20,7 @@ void mock_read_sensor_data(uint16_t *data) {
     }
 }
 
+
 // Test for `calculate_average`
 TEST(SensorDataTests, CalculateAverage) {
     std::cout << "Running CalculateAverage test..." << std::endl;

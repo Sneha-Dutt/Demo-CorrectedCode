@@ -15,7 +15,8 @@ int calculate_average(uint16_t *data, int size) {
     for (int i = 0; i < size; i++) {
         sum += data[i];
     }
-    printf("calculate_average: %d\n", sum);
+    printf("calculate_average: %d", sum);
+    printf("\n");
     return sum / size;
 }
 
