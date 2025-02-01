@@ -7,7 +7,7 @@
 
 // Function prototypes from the main code
 void read_sensor_data(uint16_t *data);
-int calculate_average(uint16_t *data, int size);
+float calculate_average(uint16_t *data, int size);
 void process_data(uint16_t *data);
 void print_data(uint16_t *data, int size);
 
@@ -26,7 +26,7 @@ TEST(SensorDataTests, CalculateAverage) {
     std::cout << "Running CalculateAverage test..." << std::endl;
     uint16_t test_data[BUFFER_SIZE] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000,
                                        1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 1900, 2000};
-    int average = calculate_average(test_data, BUFFER_SIZE);
+    float average = calculate_average(test_data, BUFFER_SIZE);
     std::cout << "Calculated average: " << average << std::endl;
     EXPECT_EQ(average, 1049); // Expected average of the test data
 }

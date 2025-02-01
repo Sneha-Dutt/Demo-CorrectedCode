@@ -10,12 +10,12 @@ void read_sensor_data(uint16_t *data) {
     }
 }
 
-int calculate_average(uint16_t *data, int size) {
+float calculate_average(uint16_t *data, int size) {
     int sum = 0;
     for (int i = 0; i < size; i++) {
         sum += data[i];
     }
-    printf("calculate_average: %d", sum);
+    printf("calculate_average: %f", sum);
     printf("\n");
     return sum / size;
 }
@@ -27,7 +27,7 @@ void print_data(uint16_t *data, int size) {
 }
 
 void process_data(uint16_t *data) {
-    int avg = calculate_average(data, BUFFER_SIZE);
+    float avg = calculate_average(data, BUFFER_SIZE);
     printf("Average sensor value: %d\n", avg); 
     
     if (avg > 512) {
