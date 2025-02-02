@@ -13,7 +13,7 @@ read_sensor_data(uint16_t *data): Fills an array with 20 random values (0–1023
 calculate_average(uint16_t *data, int size): Calculates the average of the sensor data using integer division.
 print_data(uint16_t *data, int size): Prints each sensor data point with its index.
 process_data(uint16_t *data):
-Calculates the average sensor value.
+Calculates average sensor value.
 Displays the average.
 Prints a warning if the average exceeds 512, indicating a potential issue; otherwise, it indicates the data is within a safe range.
 Main Function:
