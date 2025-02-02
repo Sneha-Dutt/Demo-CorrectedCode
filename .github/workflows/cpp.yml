@@ -1,3 +1,4 @@
+#Name of the pipeline
 name: Static Analysis and Testing Pipeline
 
 on:
@@ -73,7 +74,7 @@ jobs:
             echo "Unit Test Results:"
             cat build/unit_test_report.xml
 
-      # Upload unit test result logs as an artifact
+      # Upload unit test result logs as artifact
       - name: Upload unit test log
         uses: actions/upload-artifact@v4
         with:
